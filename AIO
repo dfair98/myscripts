@@ -53,7 +53,7 @@ allcoinNOnomp() {
 	echo "---------------------------------------------------------------------------"
 	echo "---------------------------------------------------------------------------"
 	sleep 2
-	sudo apt-get install build-essential libssl-dev libdb5.1-dev libdb5.1++-dev libboost-all-dev git autoconf automake libtool cmake -y
+	sudo apt-get install build-essential libssl-dev libdb5.3-dev libdb5.3++-dev libboost-all-dev git autoconf automake libtool cmake -y
 	cd ~/
 	mkdir wallets
 	cd wallets
@@ -88,7 +88,7 @@ allcoins() {
 	echo "---------------------------------------------------------------------------"
 	echo "---------------------------------------------------------------------------"
 	sleep 2
-	sudo apt-get install build-essential libssl-dev libdb5.1-dev libdb5.1++-dev libboost-all-dev git autoconf automake libtool cmake -y
+	sudo apt-get install build-essential libssl-dev libdb5.3-dev libdb5.3++-dev libboost-all-dev git autoconf automake libtool cmake -y
 	cd ~/
 	mkdir wallets
 	cd wallets
@@ -169,7 +169,7 @@ dash() {
 	echo "---------------------------------------------------------------------------"
 	echo "---------------------------------------------------------------------------"
 	sleep 2
-	sudo apt-get install build-essential libssl-dev libdb5.1-dev libdb5.1++-dev libboost-all-dev git autoconf automake libtool cmake -y
+	sudo apt-get install build-essential libssl-dev libdb5.3-dev libdb5.3++-dev libboost-all-dev git autoconf automake libtool cmake -y
 	cd ~/	
 	git clone https://github.com/dashpay/dash.git
 	cd dash
@@ -216,7 +216,7 @@ fourty2() {
 	echo "---------------------------------------------------------------------------"
 	echo "---------------------------------------------------------------------------"
 	sleep 2
-	sudo apt-get install build-essential libssl-dev libdb5.1-dev libdb5.1++-dev libminiupnpc-dev libboost-all-dev git autoconf automake libtool -y
+	sudo apt-get install build-essential libssl-dev libdb5.3-dev libdb5.3++-dev libminiupnpc-dev libboost-all-dev git autoconf automake libtool -y
 	cd ~/
 	git clone https://github.com/fourtytwo42/42.git
 	cd 42/src
@@ -297,7 +297,7 @@ ltc() {
 	echo "---------------------------------------------------------------------------"
 	echo "---------------------------------------------------------------------------"
 	sleep 2
-	sudo apt-get install build-essential libssl-dev libdb5.1-dev libdb5.1++-dev libboost-all-dev git autoconf automake libtool -y
+	sudo apt-get install build-essential libssl-dev libdb5.3-dev libdb5.3++-dev libboost-all-dev git autoconf automake libtool -y
 	cd ~/
 	git clone git://github.com/litecoin-project/litecoin.git
 	cd litecoin
@@ -355,7 +355,7 @@ nomp() {
 		echo "Installing NOMP+LTC+DASH+dependancies"
 		echo "---------------------------------------------------------------------------"
 		cd ~/
-		sudo apt-get install build-essential libssl-dev libminiupnpc-dev libdb5.1-dev libdb5.1++-dev libboost-all-dev git autoconf automake libtool g++ -y
+		sudo apt-get install build-essential libssl-dev libminiupnpc-dev libdb5.3-dev libdb5.3++-dev libboost-all-dev git autoconf automake libtool g++ -y
 		sudo apt-get install curl -y
 		curl --silent --location https://deb.nodesource.com/setup_0.10 | sudo bash -
 		sudo apt-get install --yes nodejs
@@ -394,7 +394,7 @@ nomp1() {
 		echo "Installing NOMP+dependancies"
 		echo "---------------------------------------------------------------------------"
 		cd ~/
-		sudo apt-get install build-essential libssl-dev libminiupnpc-dev libdb5.1-dev libdb5.1++-dev libboost-all-dev git autoconf automake libtool g++ -y
+		sudo apt-get install build-essential libssl-dev libminiupnpc-dev libdb5.3-dev libdb5.3++-dev libboost-all-dev git autoconf automake libtool g++ -y
 		sudo apt-get install curl -y
 		curl --silent --location https://deb.nodesource.com/setup_0.10 | sudo bash -
 		sudo apt-get install --yes nodejs
@@ -429,7 +429,7 @@ nyan() {
 	echo "---------------------------------------------------------------------------"
 	echo "---------------------------------------------------------------------------"
 	sleep 2
-	sudo apt-get install build-essential libssl-dev libminiupnpc-dev libdb5.1-dev libdb5.1++-dev libboost-all-dev git autoconf automake libtool -y
+	sudo apt-get install build-essential libssl-dev libminiupnpc-dev libdb5.3-dev libdb5.3++-dev libboost-all-dev git autoconf automake libtool -y
 	cd ~/
 	git clone https://github.com/nyancoin-release/nyancoin.git
 	cd nyancoin/src
@@ -454,7 +454,7 @@ sexcoin() {
 	echo "---------------------------------------------------------------------------"
 	echo "---------------------------------------------------------------------------"
 	sleep 2
-	sudo apt-get install build-essential libminiupnpc-dev libssl-dev libdb5.1-dev libdb5.1++-dev libboost-all-dev git autoconf automake libtool -y
+	sudo apt-get install build-essential libminiupnpc-dev libssl-dev libdb5.3-dev libdb5.3++-dev libboost-all-dev git autoconf automake libtool -y
 	cd ~/
 	git clone https://github.com/sexcoin-project/sexcoin.git
 	cd sexcoin/src
@@ -641,7 +641,7 @@ zetacoin() {
 	echo "---------------------------------------------------------------------------"
 	echo "---------------------------------------------------------------------------"
 	sleep 2
-	sudo apt-get install build-essential libssl-dev libdb5.1-dev libdb5.1++-dev libboost-all-dev git autoconf automake libtool libminiupnp-devc -y
+	sudo apt-get install build-essential libssl-dev libdb5.3-dev libdb5.3++-dev libboost-all-dev git autoconf automake libtool libminiupnp-devc -y
 	cd ~/
 	git clone https://github.com/zetacoin/zetacoin.git
 	cd zetacoin
@@ -660,6 +660,33 @@ zetacoin() {
 	echo rpcport=17333 >> ~/.zetacoin/zetacoin.conf
 	echo "Now go into ~/.zetacoin/zetacoin.conf and add your username and password"
 	echo "then run zetacoin to start wallet"
+	ending
+}
+dogecoin() {
+	echo "---------------------------------------------------------------------------"
+	echo "---------------------------------------------------------------------------"
+	echo "Now installing doegecoin daemon (command line only)"
+	echo "---------------------------------------------------------------------------"
+	echo "---------------------------------------------------------------------------"
+	sleep 2
+	sudo apt-get install apt-get install build-essential libtool autotools-dev autoconf pkg-config libssl-dev libboost-all-dev libdb5.3-dev libdb5.3++-dev libminiupnpc-dev
+	cd ~/
+	git clone https://github.com/dogecoin/dogecoin.git
+	cd doegecoin
+	./autogen.sh
+	./configure --with-incompatible-bdb
+	make 
+	make install 
+	cd ~/
+	mkdir ~/.doegecoin
+	echo rpcuser=zetarpc >> ~/.doegecoin/doegecoin.conf
+	echo rpcpassword=InsertSecureP4ssH3r3 >> ~/.doegecoin/doegecoin.conf
+	echo listen=1 >> ~/.doegecoin/doegecoin.conf
+	echo server=1 >> ~/.doegecoin/doegecoin.conf
+	echo daemon=1 >> ~/.doegecoin/doegecoin.conf
+	echo rpcport=22555 >> ~/.doegecoin/doegecoin.conf
+	echo "Now go into ~/.doegecoin/doegecoin.conf and add your username and password"
+	echo "then run doegecoin to start wallet"
 	ending
 }
 OPTIND=1 # Reset is necessary if getopts was used previously in the script.  It is a good idea to make this local in a function.
@@ -720,6 +747,10 @@ while getopts "Skhoausneic1lbAdwtTNKLXGp?:" opt; do
 	   exit 0
 	   ;;
         d) dash
+           sleep 3
+	   exit 0
+	   ;;
+	   D) dogecoin
            sleep 3
 	   exit 0
 	   ;;
