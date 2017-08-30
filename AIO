@@ -690,7 +690,7 @@ dogecoin() {
 	ending
 }
 OPTIND=1 # Reset is necessary if getopts was used previously in the script.  It is a good idea to make this local in a function.
-while getopts "Skhoausneic1lbAdwtTNKLXGp?:" opt; do
+while getopts "Skhoausneic1lbAdDwtTNKLXGp?:" opt; do
      case "$opt" in
         h) usage
            exit 0
@@ -750,7 +750,7 @@ while getopts "Skhoausneic1lbAdwtTNKLXGp?:" opt; do
            sleep 3
 	   exit 0
 	   ;;
-	   D) dogecoin
+	D) dogecoin
            sleep 3
 	   exit 0
 	   ;;
